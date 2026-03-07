@@ -4,8 +4,8 @@ light anything up with govee, right from mpris.
 
 [![OS - Linux](https://img.shields.io/badge/OS-Linux-blue?logo=linux&logoColor=white)](https://www.linux.org/ "Go to Linux homepage")
 [![Made with Python](https://img.shields.io/badge/Python->=3.18-blue?logo=python&logoColor=white)](https://python.org "Go to Python homepage")
-![PyPI](https://img.shields.io/pypi/v/mprisgovee)
-[![GitHub tag](https://img.shields.io/github/tag/obvRedwolf/mprisgovee?include_prereleases=&sort=semver&color=blue)](https://github.com/obvRedwolf/mprisgovee/releases/)
+[![PyPI](https://img.shields.io/pypi/v/mprisgovee?label=pypi%20package)](https://pypi.org/project/mprisgovee/ "Go to PyPI package")
+[![PyPI - Downloads](https://img.shields.io/pypi/dm/mprisgovee)](https://pypi.org/project/mprisgovee/#files "Go to PyPI package files")
 [![License](https://img.shields.io/badge/License-MIT-blue)](#license)
 [![contributions - welcome](https://img.shields.io/badge/contributions-welcome-blue)](/CONTRIBUTING.md "Go to contributions doc")
 
