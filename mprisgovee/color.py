@@ -46,7 +46,7 @@ def get_color(url):
                 ]
             )
         except Exception as e:
-            print("error sending notification:", e)
+            print("error sending notification: ", e)
 
         # make it obvious that something went wrong
         return (255, 0, 255)

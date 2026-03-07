@@ -36,8 +36,9 @@ light anything up with govee, right from mpris.
 ## installation
 ### pip
 `mprisgovee` is avaliable on **PyPI**:
-
-`pip install mprisgovee`
+```
+pip install mprisgovee
+```
 
 ## usage
 you can start it by either manually running `mprisgovee` from your terminal or running at startup using your favorite method.
