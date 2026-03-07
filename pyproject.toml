@@ -1,0 +1,31 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "mprisgovee"
+version = "1.0.0"
+description = "light anything up with govee, right from mpris."
+authors = [
+  {name = "Ronald Nguyen", email = "ronaldpham32766@outlook.com"},
+]
+readme = "README.md"
+license = "MIT"
+keywords = ["music", "media", "mpris", "govee", "light", "color"]
+classifiers = [
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+]
+
+requires-python = ">=3.9"
+dependencies = [
+    "colorthief",
+    "requests"
+]
+
+[project.scripts]
+mprisgovee = "mprisgovee.main:main"
+
+[project.urls]
+Repository = "https://github.com/obvRedwolf/mprisgovee.git"
+Issues = "https://github.com/obvRedwolf/mprisgovee/issues"
