@@ -7,9 +7,11 @@ CONFIG_DIR = Path.home() / ".config" / "mprisgovee"
 CONFIG_FILE = CONFIG_DIR / "config.toml"
 
 DEFAULT_CONFIG_TOML = """
-# ip address of your govee device
+# ip address of your govee devices
 # you can find this by going to your device's settings page, getting the mac, and matching it up with a device ip on your network
-govee_ip = "192.168.1.100"
+# format this as a list
+# ex: ["192.168.1.100", "192.168.1.101", "192.168.1. ..."]
+govee_ip = ["192.168.1.100", "192.168.1.101"]
 
 # lan port of your govee device
 # you can usually leave this default

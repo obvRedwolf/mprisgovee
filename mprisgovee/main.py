@@ -19,35 +19,38 @@ async def handle_art(url, player, status):
 
     print("\n")
 
-    if config["brightness_on_play_pause"]:
-        if (status == "Paused") or (status == "Stopped"):
-            set_brightness(
-                config["govee_ip"], config["govee_port"], config["brightness_paused"]
-            )
-            print(f"set brightness {config['brightness_playing']} from paused {player}")
-        elif status == "Playing":
-            set_brightness(
-                config["govee_ip"], config["govee_port"], config["brightness_playing"]
-            )
-            print(
-                f"set brightness {config['brightness_playing']} from playing {player}"
-            )
+    for device in config["govee_ip"]:
+        if config["brightness_on_play_pause"]:
+            if (status == "Paused") or (status == "Stopped"):
+                set_brightness(
+                    device, config["govee_port"], config["brightness_paused"]
+                )
+                print(
+                    f"set brightness {config['brightness_playing']} from paused {player}"
+                )
+            elif status == "Playing":
+                set_brightness(
+                    device, config["govee_port"], config["brightness_playing"]
+                )
+                print(
+                    f"set brightness {config['brightness_playing']} from playing {player}"
+                )
 
-    if url in cache:
-        print("cached color found")
-        r, g, b = cache[url]
+        if url in cache:
+            print("cached color found")
+            r, g, b = cache[url]
 
-    else:
-        r, g, b = get_color(url)
-        cache[url] = [r, g, b]
+        else:
+            r, g, b = get_color(url)
+            cache[url] = [r, g, b]
 
-        # only save cache if no error
-        if not ((r, g, b) == (255, 0, 255)):
-            save_cache(cache)
+            # only save cache if no error
+            if not ((r, g, b) == (255, 0, 255)):
+                save_cache(cache)
 
-    set_color(config["govee_ip"], config["govee_port"], r, g, b)
+        set_color(device, config["govee_port"], r, g, b)
 
-    print(f"set color {r}, {g}, {b} from {player}")
+        print(f"set color {r}, {g}, {b} from {player}")
 
 
 def main():
