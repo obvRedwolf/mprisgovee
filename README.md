@@ -17,6 +17,7 @@ light anything up with govee, right from mpris.
 - change **govee** device **color** with dominant color from **song art**
     - uses the **lan api** for extremely **fast** updates
 - **cache** colors to avoid reprocessing
+- detect **play/pause** for **brightness** changes
 - app **ignoring**
 - **configurable** settings
 
@@ -67,6 +68,12 @@ govee_ip = "192.168.1.100"
 
 govee_port = 4003
 
+brightness_on_play_pause = true
+
+brightness_playing = 100
+
+brightness_paused = 10
+
 ignored_apps = [
     "firefox",
     "chromium",
@@ -81,6 +88,12 @@ ignored_apps = [
 - **govee_port**:
     - sets the current **port**.
         - this can usually be left **default**.
+- **brightness_on_play_pause**:
+    - **enables** brightness changes on **play/pause**.
+- **brightness_playing**:
+    - changes the **brightness level** on **play**
+- **brightness_paused**:
+    - changes the **brightness level** on **pause**
 - **ignored_apps**:
     - **ignores** all apps on list.
 
