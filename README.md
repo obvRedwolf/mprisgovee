@@ -4,8 +4,8 @@ light anything up with govee, right from mpris.
 
 [![OS - Linux](https://img.shields.io/badge/OS-Linux-blue?logo=linux&logoColor=white)](https://www.linux.org/ "Go to Linux homepage")
 [![Made with Python](https://img.shields.io/badge/Python->=3.18-blue?logo=python&logoColor=white)](https://python.org "Go to Python homepage")
-[![PyPI](https://img.shields.io/pypi/v/mprisgovee?label=pypi%20package)](https://pypi.org/project/mprisgovee/ "Go to PyPI package")
-[![PyPI - Downloads](https://img.shields.io/pypi/dm/mprisgovee)](https://pypi.org/project/mprisgovee/#files "Go to PyPI package files")
+[![PyPI](https://img.shields.io/pypi/v/mprisgovee?label=pypi%20package)](https://aur.archlinux.org/packages/python-mprisgovee "Go to AUR package")
+[![AUR](https://img.shields.io/aur/version/python-mprisgovee)](https://pypi.org/project/mprisgovee/ "Go to PyPI package")
 [![License](https://img.shields.io/badge/License-MIT-blue)](#license)
 [![contributions - welcome](https://img.shields.io/badge/contributions-welcome-blue)](/CONTRIBUTING.md "Go to contributions doc")
 
@@ -39,6 +39,15 @@ light anything up with govee, right from mpris.
 `mprisgovee` is avaliable on **PyPI**:
 ```
 pip install mprisgovee
+```
+### Arch (AUR)
+`mprisgovee` is avaliable on the **AUR** for **Arch** users under `python-mprisgovee`:
+```
+# for yay users
+yay -S python-mprisgovee
+
+# for paru users
+paru -S python-mprisgovee
 ```
 
 ## usage
