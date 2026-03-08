@@ -14,5 +14,6 @@ jobs:
           uses: anas-elgarhy/aur-release-action@v4.1
           with:
             package_name: python-mprisgovee
+            github_branch: main
             ssh_private_key: ${{ secrets.AUR_SSH_PRIVATE_KEY }}
             github_token: ${{ secrets.GITHUB_TOKEN }}
