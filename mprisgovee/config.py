@@ -15,6 +15,15 @@ govee_ip = "192.168.1.100"
 # you can usually leave this default
 govee_port = 4003
 
+# change brightness on play/pause
+brightness_on_play_pause = true
+
+# brightness level when playing
+brightness_playing = 100
+
+# brightness level when paused
+brightness_paused = 10
+
 # apps to ignore ignore when looking for song art
 # by default, common browsers are ignored
 ignored_apps = [
@@ -35,12 +44,14 @@ def load_config():
     if not CONFIG_FILE.exists():
         with open(CONFIG_FILE, "w") as f:
             f.write(DEFAULT_CONFIG_TOML)
+
         print("running with first-launch default settings!")
         print(f'edit "{CONFIG_FILE}" to change settings!')
 
     try:
         with open(CONFIG_FILE, "rb") as f:
             return tomllib.load(f)
+
     except Exception as e:
         print(f"failed to load config: {e}")
         sys.exit(1)
