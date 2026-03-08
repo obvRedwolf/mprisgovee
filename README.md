@@ -10,7 +10,7 @@ light anything up with govee, right from mpris.
 [![contributions - welcome](https://img.shields.io/badge/contributions-welcome-blue)](/CONTRIBUTING.md "Go to contributions doc")
 
 ## showcase
-![showcase](https://github.com/user-attachments/assets/65dda586-762b-478e-8a9c-e460614b3cdf)
+<img src="https://raw.githubusercontent.com/obvRedwolf/mprisgovee/main/img/showcase.gif" width="600">
 
 ## features
 - **detect song art** from **any mpris player** automatically
