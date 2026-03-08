@@ -12,9 +12,11 @@ def get_color(url):
             response = requests.get(url, timeout=5)
             response.raise_for_status()
             img_bytes = BytesIO(response.content)
+
             ct = ColorThief(img_bytes)
         else:  # local
             path = url.removeprefix("file://")
+
             ct = ColorThief(path)
 
         palette = ct.get_palette(color_count=8, quality=1)
