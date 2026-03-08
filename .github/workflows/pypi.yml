@@ -4,11 +4,6 @@ on:
   push:
     tags:
       - "v*"
-  workflow_dispatch:
-    inputs:
-      version:
-        description: 'tag version'
-        required: true
 jobs:
   build-and-publish:
     runs-on: ubuntu-latest

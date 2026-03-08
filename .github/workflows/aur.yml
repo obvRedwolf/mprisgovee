@@ -4,11 +4,6 @@ on:
   push:
     tags:
       - "*"
-  workflow_dispatch:
-    inputs:
-      version:
-        description: 'tag version'
-        required: true
 jobs:
     aur-publish:
         runs-on: ubuntu-latest
