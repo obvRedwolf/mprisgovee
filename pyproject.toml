@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "mprisgovee"
-version = "1.1.0"
+version = "1.2.0"
 description = "light anything up with govee, right from mpris."
 authors = [
   {name = "Ronald Nguyen", email = "ronaldpham32766@outlook.com"},
