@@ -6,7 +6,7 @@ async def watch_metadata(callback):
         "playerctl",
         "--follow",
         "--format",
-        "{{playerName}}|{{mpris:artUrl}}",
+        "{{playerName}}|{{mpris:artUrl}}|{{status}}",
         "metadata",
         stdout=asyncio.subprocess.PIPE,
         stderr=asyncio.subprocess.DEVNULL,
@@ -24,8 +24,8 @@ async def watch_metadata(callback):
             continue
 
         try:
-            player, url = line.split("|", 1)
+            player, url, status = line.split("|", 2)
         except ValueError:
             continue
 
-        asyncio.create_task(callback(url, player))
+        asyncio.create_task(callback(url, player, status))
