@@ -16,6 +16,7 @@ light anything up with govee, right from mpris.
 - **detect song art** from **any mpris player** automatically
 - change **govee** device **color** with dominant color from **song art**
     - uses the **lan api** for extremely **fast** updates
+- **multidevice** support
 - **cache** colors to avoid reprocessing
 - detect **play/pause** for **brightness** changes
 - app **ignoring**
@@ -64,7 +65,7 @@ the config file can usually be found at `~/.config/mprisgovee/config.toml`.
 
 ### default configuration
 ```toml
-govee_ip = "192.168.1.100"
+govee_ip = ["192.168.1.100", "192.168.1.101"]
 
 govee_port = 4003
 
@@ -85,6 +86,7 @@ ignored_apps = [
 ```
 - **govee_ip**:
     - sets the current **ip address**.
+    - format this as a **list**
 - **govee_port**:
     - sets the current **port**.
         - this can usually be left **default**.
