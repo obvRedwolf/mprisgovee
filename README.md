@@ -4,10 +4,10 @@ light anything up with govee, right from mpris.
 
 [![OS - Linux](https://img.shields.io/badge/OS-Linux-blue?logo=linux&logoColor=white)](https://www.linux.org/ "Go to Linux homepage")
 [![Made with Python](https://img.shields.io/badge/Python->=3.18-blue?logo=python&logoColor=white)](https://python.org "Go to Python homepage")
-[![PyPI](https://img.shields.io/pypi/v/mprisgovee?label=pypi%20package)](https://aur.archlinux.org/packages/python-mprisgovee "Go to AUR package")
-[![AUR](https://img.shields.io/aur/version/python-mprisgovee)](https://pypi.org/project/mprisgovee/ "Go to PyPI package")
+[![PyPI](https://img.shields.io/pypi/v/mprisgovee?label=pypi%20package)](https://pypi.org/project/mprisgovee/ "Go to PyPI package")
+[![AUR](https://img.shields.io/aur/version/python-mprisgovee)](https://aur.archlinux.org/packages/python-mprisgovee "Go to AUR package")
 [![License](https://img.shields.io/badge/License-MIT-blue)](#license)
-[![contributions - welcome](https://img.shields.io/badge/contributions-welcome-blue)](/CONTRIBUTING.md "Go to contributions doc")
+![contributions - welcome](https://img.shields.io/badge/contributions-welcome-blue)
 
 ## showcase
 <img src="https://raw.githubusercontent.com/obvRedwolf/mprisgovee/main/img/showcase.gif" width="600">
