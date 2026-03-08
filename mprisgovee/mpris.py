@@ -4,9 +4,10 @@ import asyncio
 async def watch_metadata(callback):
     proc = await asyncio.create_subprocess_exec(
         "playerctl",
-        "metadata",
         "--follow",
-        "mpris:artUrl",
+        "--format",
+        "{{playerName}}|{{mpris:artUrl}}",
+        "metadata",
         stdout=asyncio.subprocess.PIPE,
         stderr=asyncio.subprocess.DEVNULL,
     )
@@ -15,11 +16,16 @@ async def watch_metadata(callback):
 
     while True:
         line = await proc.stdout.readline()
-
         if not line:
             break
 
-        url = line.decode().strip()
+        line = line.decode().strip()
+        if not line:
+            continue
 
-        if url:
-            asyncio.create_task(callback(url))
+        try:
+            player, url = line.split("|", 1)
+        except ValueError:
+            continue
+
+        asyncio.create_task(callback(url, player))

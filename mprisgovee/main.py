@@ -12,9 +12,13 @@ config = load_config()
 cache = load_cache()
 
 
-async def handle_art(url):
+async def handle_art(url, player):
+    if player in config["ignored_apps"]:
+        print(f"ignored {player}")
+        return
 
     if url in cache:
+        print("cached color found")
         r, g, b = cache[url]
 
     else:
@@ -27,7 +31,7 @@ async def handle_art(url):
 
     set_color(config["govee_ip"], config["govee_port"], r, g, b)
 
-    print(f"set color {r}, {g}, {b}")
+    print(f"set color {r}, {g}, {b} from {player}")
 
 
 def main():
