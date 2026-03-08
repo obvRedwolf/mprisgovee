@@ -17,6 +17,7 @@ light anything up with govee, right from mpris.
 - change **govee** device **color** with dominant color from **song art**
     - uses the **lan api** for extremely **fast** updates
 - **cache** colors to avoid reprocessing
+- app **ignoring**
 - **configurable** settings
 
 ## prerequisites
@@ -49,20 +50,30 @@ spawn-sh-at-startup "mprisgovee"
 ```
 
 ## configuration
-the config file can usually be found at `~/.config/mprisgovee/config.json`.
+the config file can usually be found at `~/.config/mprisgovee/config.toml`.
 
 ### default configuration
-```json
-{
-    "govee_ip": "192.168.1.100",
-    "govee_port": 4003
-}
+```toml
+govee_ip = "192.168.1.100"
+
+govee_port = 4003
+
+ignored_apps = [
+    "firefox",
+    "chromium",
+    "chrome",
+    "brave",
+    "vivaldi",
+    "zen",
+    "opera"
 ```
 - **govee_ip**:
     - sets the current **ip address**.
 - **govee_port**:
     - sets the current **port**.
         - this can usually be left **default**.
+- **ignored_apps**:
+    - **ignores** all apps on list.
 
 ## thanks to:
 - **[Dynamic Lights Home Assistant](https://github.com/muckelba/dynamic-lights-homeassistant/)** - original inspiration
