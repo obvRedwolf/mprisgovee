@@ -57,7 +57,7 @@ you can start it by either manually running `mprisgovee` from your terminal or r
 
 ### example (niri):
 ```
-spawn-sh-at-startup "mprisgovee"
+spawn-at-startup "mprisgovee"
 ```
 
 ## configuration
