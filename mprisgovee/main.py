@@ -26,7 +26,7 @@ async def handle_art(url, player, status):
                     device, config["govee_port"], config["brightness_paused"]
                 )
                 print(
-                    f"set brightness {config['brightness_playing']} from paused {player}"
+                    f"set brightness {config['brightness_paused']} from paused {player}"
                 )
             elif status == "Playing":
                 set_brightness(
